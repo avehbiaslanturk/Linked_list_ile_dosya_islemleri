@@ -86,8 +86,8 @@ char *dosyadan_satir_oku(char *dosya_adi)
 
 	if(ilk_okumami == 1)
 	{
-		fseek(my_stream, cursor_position, SEEK_SET);
-		my_string = (char *)malloc(nbytes);
+	    fseek(my_stream, cursor_position, SEEK_SET);
+	    my_string = (char *)malloc(nbytes);
 	    read = getline(&my_string, &nbytes, my_stream);
 	    cursor_position = (int)read;
 	    ilk_okumami = 0;
