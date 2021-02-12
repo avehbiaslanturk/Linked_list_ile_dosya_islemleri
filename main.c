@@ -5,9 +5,9 @@
 
 typedef struct Node
 {
-	char kelime[30];
-	char anlami[500];
-	struct Node *next;
+    char kelime[30];
+    char anlami[500];
+    struct Node *next;
 }Node;
 
 
@@ -32,7 +32,7 @@ void insert_beginning(Node **root, char girdi_kelime[], char girdi_anlami[] )
 void insert_after(Node *node, char girdi_kelime[], char girdi_anlami[])
 {
 
-	Node *new_node = malloc(sizeof(Node));
+    Node *new_node = malloc(sizeof(Node));
     if (new_node == NULL)
     {
     	exit(4);
@@ -67,10 +67,10 @@ void insert_sorted(Node **root, char girdi_kelime[], char girdi_anlami[])
     }
 
     insert_after(curr, girdi_kelime, girdi_anlami);
-    //mesela 3 ve 6 yı ekledim. 7 ekleyecek olsam
+    //mesela 3 ve 6 yı ekledim. 7 ekleyecek olsam:
     //eğer üstteki satırdaki kod olmazsa 7 yi eklemez. Çünkü yukarıdaki
     //döngü, benden sonra büyük var mı diye baktı ama bulamadı. Dolayısıyla
-    // " | " şeklinde olan imleç en sonra geldi ve orada kaldı. Bundan
+    // " | " şeklinde olan imleç en sona geldi ve orada kaldı. Bundan
     //dolayı bize düşen sadece imlecin olduğu pozisyona değeri eklemek
 }
 
